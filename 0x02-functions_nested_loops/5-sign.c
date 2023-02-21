@@ -1,28 +1,27 @@
-#include "headers.h"
+#include "main.h"
+
 /**
- * print_sign - Evaluate sign of number
- * @n: number to be checked
+ * print_sign - prints the sign of a number
+ * @n: n is an integer
  *
- * Return: 1, 0 or -1
+ * Return: 1 (if positive), 0 (if zero), -1 (if negative)
  */
+
 int print_sign(int n)
 {
-	int test;
-
 	if (n > 0)
 	{
 		_putchar('+');
-		test = 1;
-	}
-	else if (n == 0)
-	{
-		_putchar('0');
-		test = 0;
+		return (1);
 	}
 	else if (n < 0)
 	{
 		_putchar('-');
-		test = -1;
+		return (-1);
 	}
-	return (test);
+	else
+	{
+		_putchar('0');
+		return (0);
+	}
 }
